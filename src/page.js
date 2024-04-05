@@ -74,6 +74,49 @@ function Menu() {
     // creating page content for Menu:
     clearContent();
 
+    // menu content
+    japanMenu = [
+        ['Nissin Roah', 'nissin.jpg', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        At perferendis quibusdam quidem provident neque corporis atque, doloremque dolore illum tempora 
+        omnis non suscipit debitis exercitationem impedit, possimus nobis, id voluptas. Minima minus nihil 
+        molestiae corrupti esse ratione fugiat iste culpa amet earum, accusamus temporibus eum officiis, 
+        recusandae, magnam at sunt.`],
+
+        ['Maruchan Seimen', 'maruchan.jpg', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        At perferendis quibusdam quidem provident neque corporis atque, doloremque dolore illum tempora 
+        omnis non suscipit debitis exercitationem impedit, possimus nobis, id voluptas. Minima minus nihil 
+        molestiae corrupti esse ratione fugiat iste culpa amet earum, accusamus temporibus eum officiis, 
+        recusandae, magnam at sunt.`]
+    ];
+
+    koreaMenu = [
+        ['Nongshim Shin', 'nongshim.jpg', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        At perferendis quibusdam quidem provident neque corporis atque, doloremque dolore illum tempora 
+        omnis non suscipit debitis exercitationem impedit, possimus nobis, id voluptas. Minima minus nihil 
+        molestiae corrupti esse ratione fugiat iste culpa amet earum, accusamus temporibus eum officiis, 
+        recusandae, magnam at sunt.`],
+
+        ['Ottogi Jin Jjambbong', 'ottogi.jpg', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        At perferendis quibusdam quidem provident neque corporis atque, doloremque dolore illum tempora 
+        omnis non suscipit debitis exercitationem impedit, possimus nobis, id voluptas. Minima minus nihil 
+        molestiae corrupti esse ratione fugiat iste culpa amet earum, accusamus temporibus eum officiis, 
+        recusandae, magnam at sunt.`]
+    ];
+
+    seasiaMenu = [
+        ['Indomie Mi Goreng', 'indomi.jpg', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        At perferendis quibusdam quidem provident neque corporis atque, doloremque dolore illum tempora 
+        omnis non suscipit debitis exercitationem impedit, possimus nobis, id voluptas. Minima minus nihil 
+        molestiae corrupti esse ratione fugiat iste culpa amet earum, accusamus temporibus eum officiis, 
+        recusandae, magnam at sunt.`],
+
+        ['MAMA Shrimp Creamy Tom Yum', 'mama.jpg', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        At perferendis quibusdam quidem provident neque corporis atque, doloremque dolore illum tempora 
+        omnis non suscipit debitis exercitationem impedit, possimus nobis, id voluptas. Minima minus nihil 
+        molestiae corrupti esse ratione fugiat iste culpa amet earum, accusamus temporibus eum officiis, 
+        recusandae, magnam at sunt.`]
+    ];
+    
     // title page
     const elementTitle = document.createElement('div');
     elementTitle.setAttribute('class', 'title');
