@@ -1,5 +1,11 @@
+function clearContent() {
+    const content = document.querySelector('#content');
+    return content.replaceChildren();
+};
+
 function Home() {
     // creating page content for Home:
+    clearContent();
 
     // title page
     const elementTitle = document.createElement('div');
@@ -66,6 +72,7 @@ function Home() {
 
 function Menu() {
     // creating page content for Menu:
+    clearContent();
 
     // title page
     const elementTitle = document.createElement('div');
@@ -80,6 +87,7 @@ function Menu() {
 
 function Contact() {
     // creating page content for Contact Us:
+    clearContent();
 
     // title page
     const elementTitle = document.createElement('div');
