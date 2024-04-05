@@ -3,6 +3,44 @@ function clearContent() {
     return content.replaceChildren();
 };
 
+function createMenu(textCountry, arrayCountry) {
+
+    // create country wrapper
+    const elementCountry = document.createElement('div');
+    elementCountry.setAttribute('class', 'country');
+    elementCountry.textContent = textCountry;
+    
+    // create menu card
+    for (let i in arrayCountry) {
+        let arrayMenu = arrayCountry[i];
+
+        let menuCard = document.createElement('div');
+        menuCard.setAttribute('class', 'menu-card');
+
+        let menuImg = document.createElement('img');
+        menuImg.setAttribute('src', `../assets/${arrayMenu[1]}`);
+        menuImg.setAttribute('width', '200px');
+
+        let menuName = document.createElement('div');
+        menuName.setAttribute('class', 'menu-name');
+        menuName.textContent = arrayMenu[0];
+
+        let menuText = document.createElement('div');
+        menuText.setAttribute('class', 'menu-text');
+        menuText.textContent = arrayMenu[2];
+
+        // add content to card
+        menuCard.appendChild(menuImg);
+        menuCard.appendChild(menuName);
+        menuCard.appendChild(menuText);
+
+        // add card to country
+        elementCountry.appendChild(menuCard);
+    };
+
+    return elementCountry;
+}
+
 function Home() {
     // creating page content for Home:
     clearContent();
@@ -74,8 +112,8 @@ function Menu() {
     // creating page content for Menu:
     clearContent();
 
-    // menu content
-    japanMenu = [
+    // array menu content
+    const japanMenu = [
         ['Nissin Roah', 'nissin.jpg', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         At perferendis quibusdam quidem provident neque corporis atque, doloremque dolore illum tempora 
         omnis non suscipit debitis exercitationem impedit, possimus nobis, id voluptas. Minima minus nihil 
@@ -89,28 +127,28 @@ function Menu() {
         recusandae, magnam at sunt.`]
     ];
 
-    koreaMenu = [
-        ['Nongshim Shin', 'nongshim.jpg', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    const koreaMenu = [
+        ['Nongshim Shin', 'nongshim.webp', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         At perferendis quibusdam quidem provident neque corporis atque, doloremque dolore illum tempora 
         omnis non suscipit debitis exercitationem impedit, possimus nobis, id voluptas. Minima minus nihil 
         molestiae corrupti esse ratione fugiat iste culpa amet earum, accusamus temporibus eum officiis, 
         recusandae, magnam at sunt.`],
 
-        ['Ottogi Jin Jjambbong', 'ottogi.jpg', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        ['Ottogi Jin Jjambbong', 'ottogi.webp', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         At perferendis quibusdam quidem provident neque corporis atque, doloremque dolore illum tempora 
         omnis non suscipit debitis exercitationem impedit, possimus nobis, id voluptas. Minima minus nihil 
         molestiae corrupti esse ratione fugiat iste culpa amet earum, accusamus temporibus eum officiis, 
         recusandae, magnam at sunt.`]
     ];
 
-    seasiaMenu = [
-        ['Indomie Mi Goreng', 'indomi.jpg', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    const seaMenu = [
+        ['Indomie Mi Goreng', 'indomi.webp', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         At perferendis quibusdam quidem provident neque corporis atque, doloremque dolore illum tempora 
         omnis non suscipit debitis exercitationem impedit, possimus nobis, id voluptas. Minima minus nihil 
         molestiae corrupti esse ratione fugiat iste culpa amet earum, accusamus temporibus eum officiis, 
         recusandae, magnam at sunt.`],
 
-        ['MAMA Shrimp Creamy Tom Yum', 'mama.jpg', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        ['MAMA Shrimp Creamy Tom Yum', 'mama.webp', `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         At perferendis quibusdam quidem provident neque corporis atque, doloremque dolore illum tempora 
         omnis non suscipit debitis exercitationem impedit, possimus nobis, id voluptas. Minima minus nihil 
         molestiae corrupti esse ratione fugiat iste culpa amet earum, accusamus temporibus eum officiis, 
@@ -122,9 +160,17 @@ function Menu() {
     elementTitle.setAttribute('class', 'title');
     elementTitle.textContent = 'Our Noodle Selection';
 
+    // create country content
+    const japanContent = createMenu('Japan', japanMenu);
+    const koreaContent = createMenu('Korea', koreaMenu);
+    const seaContent   = createMenu('South East Asia', seaMenu);
+
     // append components to content
     const content = document.querySelector('#content');
     content.appendChild(elementTitle);
+    content.appendChild(japanContent);
+    content.appendChild(koreaContent);
+    content.appendChild(seaContent);
 
 };
 
