@@ -1,7 +1,7 @@
 function clearContent() {
     const content = document.querySelector('#content');
     return content.replaceChildren();
-};
+}
 
 function createMenu(textCountry, arrayCountry) {
 
@@ -106,7 +106,7 @@ function Home() {
     content.appendChild(elementHours);
     content.appendChild(elementLocation);
 
-};
+}
 
 function Menu() {
     // creating page content for Menu:
@@ -172,7 +172,7 @@ function Menu() {
     content.appendChild(koreaContent);
     content.appendChild(seaContent);
 
-};
+}
 
 function Contact() {
     // creating page content for Contact Us:
@@ -188,4 +188,4 @@ function Contact() {
     content.appendChild(elementTitle);
 }
 
-export {Home, Menu, Contact};
+export {Home, Menu, Contact}

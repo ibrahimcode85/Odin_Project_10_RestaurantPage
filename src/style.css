@@ -1,0 +1,57 @@
+:root {
+    --main-bg-color: rgb(173, 205, 203);
+    --main-dark-color: rgb(40, 59, 20);
+    --main-dark_30pc-color: rgb(40, 59, 20, 0.3);
+    --main-light-color: rgb(243, 205, 203);
+}
+
+body {
+    margin: 0px;
+    background-image: url('../assets/background.jpg');
+    background-size: 400px;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    background-color:var(--main-bg-color);
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+
+.logo-text {
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 15px;
+    color: var(--main-dark-color);
+
+}
+
+.logo-img > img {
+    height: 100px;
+}
+
+nav {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 5px;
+}
+
+nav > button {
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    margin: 2px;
+    background-color: var(--main-bg-color);
+    color: var(--main-dark-color);
+}
+
+nav > button:hover {
+    background-color: var(--main-dark_30pc-color);
+}

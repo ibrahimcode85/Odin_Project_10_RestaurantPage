@@ -1,4 +1,5 @@
 import { Home, Menu, Contact } from './page';
+import './style.css';
 
 const buttonHome = document.querySelector('.page-home');
 buttonHome.addEventListener('click', Home);

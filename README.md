@@ -8,3 +8,5 @@ Korea - https://www.thekitchn.com/best-korean-instant-ramyun-brands-23509638
 SEA -  https://www.tripzilla.com/instant-noodles-southeast-asia-must-try/60504
 
 Attribution for background image - <a href="https://www.freepik.com/free-vector/linear-flat-abstract-lines-pattern_13756389.htm#fromView=search&page=1&position=21&uuid=dd007983-9d46-440f-92c6-375b908e8a12">Image by freepik</a>
+
+logo - <a href="https://www.flaticon.com/free-icons/instant-noodles" title="instant noodles icons">Instant noodles icons created by Freepik - Flaticon</a>
