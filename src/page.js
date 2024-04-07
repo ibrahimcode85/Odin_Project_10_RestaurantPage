@@ -3,6 +3,16 @@ function clearContent() {
     return content.replaceChildren();
 }
 
+function clearButtonStyle() {
+    
+    const arrayButton = ['page-home', 'page-menu', 'page-contact'];
+
+    for (let i in arrayButton) {
+        let button = document.querySelector(`.${arrayButton[i]}`);
+        button.style.backgroundColor = '';
+    };
+}
+
 function createMenu(textCountry, arrayCountry) {
 
     // create country wrapper
@@ -49,6 +59,11 @@ function createMenu(textCountry, arrayCountry) {
 function Home() {
     // creating page content for Home:
     clearContent();
+    clearButtonStyle();
+
+    // update button style
+    const button = document.querySelector('.page-home');
+    button.style.backgroundColor = 'rgb(40, 59, 20, 0.3)'; // same style as hover
 
     // title page
     const content = document.querySelector('#content');
@@ -114,6 +129,11 @@ function Home() {
 function Menu() {
     // creating page content for Menu:
     clearContent();
+    clearButtonStyle();
+
+    // update button style
+    const button = document.querySelector('.page-menu');
+    button.style.backgroundColor = 'rgb(40, 59, 20, 0.3)'; // same style as hover
 
     // title page
     const content = document.querySelector('#content');
@@ -178,6 +198,11 @@ function Menu() {
 function Contact() {
     // creating page content for Contact Us:
     clearContent();
+    clearButtonStyle();
+
+    // update button style
+    const button = document.querySelector('.page-contact');
+    button.style.backgroundColor = 'rgb(40, 59, 20, 0.3)'; // same style as hover
 
     // title page
     const content = document.querySelector('#content');

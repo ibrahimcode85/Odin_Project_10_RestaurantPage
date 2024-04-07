@@ -10,3 +10,5 @@ buttonMenu.addEventListener('click', Menu);
 const buttonContact = document.querySelector('.page-contact');
 buttonContact.addEventListener('click', Contact);
 
+// show home as default page
+Home();
