@@ -8,7 +8,12 @@ function createMenu(textCountry, arrayCountry) {
     // create country wrapper
     const elementCountry = document.createElement('div');
     elementCountry.setAttribute('class', 'country');
-    elementCountry.textContent = textCountry;
+    
+    // add country name
+    let countryName = document.createElement('div');
+    countryName.setAttribute('class', 'menu-country');
+    countryName.textContent = textCountry;
+    elementCountry.appendChild(countryName);
     
     // create menu card
     for (let i in arrayCountry) {
@@ -46,9 +51,8 @@ function Home() {
     clearContent();
 
     // title page
-    const elementTitle = document.createElement('div');
-    elementTitle.setAttribute('class', 'title');
-    elementTitle.textContent = 'Your Premium Instant Noodle!';
+    const content = document.querySelector('#content');
+    content.textContent = 'Your favourite instant noodle made premium!';
 
     // home >> introduction 
     const elementIntro = document.createElement('div');
@@ -64,7 +68,7 @@ function Home() {
     // home >> opening hours
     const elementHours = document.createElement('div');
     elementHours.setAttribute('class', 'opening-hours');
-    elementHours.textContent = 'Hours';
+    elementHours.textContent = 'Our opening hours:';
 
     const openHours = ["Monday:12pm - 6pm",
                         "Tuesday:12pm - 6pm",
@@ -88,6 +92,7 @@ function Home() {
     // home >> store location
     const elementLocation = document.createElement('div');
     elementLocation.setAttribute('class', 'location');
+    elementLocation.textContent = 'Our location:';
 
     const loc1 = document.createElement('div');
     loc1.textContent = 'Shopping Mall AA, Kuala Lumpur.'
@@ -100,8 +105,6 @@ function Home() {
 
 
     // append components to content
-    const content = document.querySelector('#content');
-    content.appendChild(elementTitle);
     content.appendChild(elementIntro);
     content.appendChild(elementHours);
     content.appendChild(elementLocation);
@@ -111,6 +114,10 @@ function Home() {
 function Menu() {
     // creating page content for Menu:
     clearContent();
+
+    // title page
+    const content = document.querySelector('#content');
+    content.textContent = 'Variety of noodle to choose from!';
 
     // array menu content
     const japanMenu = [
@@ -155,19 +162,13 @@ function Menu() {
         recusandae, magnam at sunt.`]
     ];
     
-    // title page
-    const elementTitle = document.createElement('div');
-    elementTitle.setAttribute('class', 'title');
-    elementTitle.textContent = 'Our Noodle Selection';
-
+ 
     // create country content
     const japanContent = createMenu('Japan', japanMenu);
     const koreaContent = createMenu('Korea', koreaMenu);
     const seaContent   = createMenu('South East Asia', seaMenu);
 
     // append components to content
-    const content = document.querySelector('#content');
-    content.appendChild(elementTitle);
     content.appendChild(japanContent);
     content.appendChild(koreaContent);
     content.appendChild(seaContent);
@@ -179,13 +180,31 @@ function Contact() {
     clearContent();
 
     // title page
-    const elementTitle = document.createElement('div');
-    elementTitle.setAttribute('class', 'title');
-    elementTitle.textContent = 'Contact Us';
+    const content = document.querySelector('#content');
+    content.textContent = 'We would love to hear from you!';
+
+    // contact-wrapper
+    const contactCard = document.createElement('div');
+    contactCard.setAttribute('class', 'contact-card');
+
+    // contact component
+    const contactImg = document.createElement('img');
+    contactImg.setAttribute('src', `../assets/avatar.png`);
+    contactImg.setAttribute('width', '200px');
+
+    const contactName = document.createElement('div');
+    contactName.setAttribute('class', 'contact-name');
+    contactName.textContent = 'Chef Alessandro of Lebanon';
+
+    const contactDesc = document.createElement('div');
+    contactDesc.setAttribute('class', 'contact-description');
+    contactDesc.textContent = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit eaque inventore officia molestiae esse, at temporibus maiores omnis est! Enim quae quis earum, tempora iste distinctio expedita placeat minima aut sed possimus recusandae ducimus commodi temporibus voluptate repudiandae! Nesciunt tempore, quo corrupti et doloribus beatae voluptatum veniam deleniti vitae provident sint rerum soluta vero, natus magnam voluptate ab ipsa harum eligendi quidem molestias maxime, ex ipsam. At sequi, impedit rem officia natus, voluptates quod quae eos sed itaque modi molestiae tempora dolorem repellendus deleniti rerum expedita temporibus nihil qui voluptate excepturi? Molestiae provident vel eligendi architecto quo. A, aperiam optio?'; 
 
     // append components to content
-    const content = document.querySelector('#content');
-    content.appendChild(elementTitle);
+    contactCard.appendChild(contactImg);
+    contactCard.appendChild(contactName);
+    contactCard.appendChild(contactDesc);
+    content.appendChild(contactCard);
 }
 
 export {Home, Menu, Contact}
