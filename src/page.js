@@ -230,6 +230,10 @@ function Contact() {
     contactCard.appendChild(contactName);
     contactCard.appendChild(contactDesc);
     content.appendChild(contactCard);
+
+    // create a second chef (clone for simplicity as this is just a dummy page)
+    const contactCard2 = contactCard.cloneNode(true);
+    content.appendChild(contactCard2);
 }
 
 export {Home, Menu, Contact}
